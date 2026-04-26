@@ -1,204 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carreira Destaque</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carreira em Destaque</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
 
-    body {
-      background: #0c0f1a;
-      color: #fff;
-      line-height: 1.6;
-    }
+img {
+    width: 100%;
+    display: block;
+}
+</style>
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 0;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-    }
-
-    .gold {
-      color: #d4af37;
-    }
-
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #d4af37, #f6d365);
-      color: #000;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* GRID */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #13182b;
-      padding: 25px;
-      border-radius: 10px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    /* LIST */
-    ul {
-      margin-top: 15px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    /* CTA FIXO */
-    .cta-fixed {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #000;
-      text-align: center;
-      padding: 15px;
-      z-index: 999;
-    }
-
-    /* RESPONSIVO */
-    @media(max-width: 768px) {
-      .hero, .grid-2 {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>Transforme sua <span class="gold">Carreira em Destaque</span></h1>
-      <p>Saia de assistente e se torne referência no trabalho com um método prático.</p>
-      <a href="#" class="btn">QUERO ME DESTACAR</a>
-    </div>
-
-    <img src="https://via.placeholder.com/600x400" alt="Imagem Hero">
-  </section>
-
-  <!-- DOR -->
-  <section class="grid-2">
-    <div class="card">
-      <h2>Você se identifica?</h2>
-      <ul>
-        <li>Depende dos outros</li>
-        <li>Demora nas tarefas</li>
-        <li>Não é reconhecido</li>
-        <li>Sente que está travado</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/500x300" alt="">
-    </div>
-  </section>
-
-  <!-- QUEBRA -->
-  <section class="card" style="margin-top:40px;">
-    <h2 class="gold">O problema não é esforço...</h2>
-    <p>É falta de clareza no que realmente gera valor no trabalho.</p>
-  </section>
-
-  <!-- AUTORIDADE -->
-  <section class="grid-2">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300" alt="">
-    </div>
-
-    <div class="card">
-      <h2>Eu posso te ajudar</h2>
-      <p>Sou gestor financeiro há mais de 20 anos e já vi centenas de profissionais travados por não saber usar o Excel da forma certa.</p>
-    </div>
-  </section>
-
-  <!-- PRODUTO -->
-  <section class="grid-2">
-    <div class="card">
-      <h2>O que você vai aprender</h2>
-      <ul>
-        <li>Organizar dados</li>
-        <li>Ganhar velocidade</li>
-        <li>Parar de depender</li>
-        <li>Pensar como analista</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/500x300" alt="">
-    </div>
-  </section>
-
-  <!-- OFERTA -->
-  <section class="card" style="text-align:center; margin-top:40px;">
-    <h2>Oferta Especial</h2>
-    <h1 class="gold">R$ 37,00</h1>
-    <p>Acesso imediato</p>
-    <a href="#" class="btn">COMPRAR AGORA</a>
-  </section>
-
-  <!-- GARANTIA -->
-  <section class="card" style="margin-top:40px;">
-    <h2>7 dias de garantia</h2>
-    <p>Se não gostar, devolvemos seu dinheiro.</p>
-  </section>
-
-</div>
-
-<!-- CTA FIXO -->
-<div class="cta-fixed">
-  <a href="#" class="btn">QUERO ME DESTACAR</a>
-</div>
+<img src="images/hero.png">
+<img src="images/dor.png">
+<img src="images/autoridade.png">
+<img src="images/aprendizado.png">
+<img src="images/jornada.png">
+<img src="images/transformacao.png">
+<img src="images/produto.png">
+<img src="images/oferta.png">
+<img src="images/cta.png">
 
 </body>
 </html>
