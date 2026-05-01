@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carreira em Destaque</title>
 
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    font-family: Arial, sans-serif;
+body{
+  margin:0;
+  background:#05070b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial;
 }
 
-img {
-    width: 100%;
-    display: block;
+.container{
+  text-align:center;
+}
+
+img{
+  max-width:90%;
+  max-height:80vh;
+  border-radius:12px;
+  box-shadow:0 0 40px rgba(215,168,70,.3);
+}
+
+.btn{
+  margin-top:30px;
+  display:inline-block;
+  background:linear-gradient(135deg,#f7d675,#c9902f);
+  color:#111;
+  padding:14px 26px;
+  border-radius:8px;
+  font-weight:900;
+  text-decoration:none;
 }
 </style>
-
 </head>
 
 <body>
 
-<img src="images/hero.png">
-<img src="images/dor.png">
-<img src="images/autoridade.png">
-<img src="images/aprendizado.png">
-<img src="images/jornada.png">
-<img src="images/transformacao.png">
-<img src="images/produto.png">
-<img src="images/oferta.png">
-<img src="images/cta.png">
+<div class="container">
+  
+  <img src="images/produto.png" alt="Livro">
+
+  <br>
+
+  <a href="/acessoimediato1/" class="btn">
+    ACESSAR PÁGINA
+  </a>
+
+</div>
 
 </body>
 </html>
