@@ -1,0 +1,1200 @@
+f<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carreira em Destaque</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#05070b;
+  color:#fff;
+  font-family:'Inter', sans-serif;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:30px 7% 30px;
+  background:
+    radial-gradient(circle at 70% 40%, rgba(212,168,70,.25), transparent 40%),
+    linear-gradient(90deg,#05070b 0%,#05070b 38%,rgba(5,7,11,.35) 100%),
+    url("images/hero.png") center right/cover no-repeat;
+}
+
+.hero-content{
+  margin-top:0;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:28px;
+  padding:6px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#f1c15a;
+  font-family:'Playfair Display', serif;
+  font-size:30px;
+  font-weight:600;
+  line-height:1.05;
+}
+
+.logo span{
+  color:#fff;
+}
+
+
+.nav{display:flex;gap:28px;font-size:13px;font-weight:500;letter-spacing:.5px;opacity:.85}
+.nav a{color:#fff;text-decoration:none}
+
+.top-btn{
+  background:linear-gradient(135deg,#f6d577,#c79232);
+  color:#111;
+  padding:14px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:13px;
+}
+
+.hero-content{max-width:520px}
+
+.kicker{
+  color:#d7a846;
+  font-weight:700;
+  letter-spacing:5px;
+  margin-bottom:18px;
+  font-size:14px;
+}
+
+
+.kicker:before,
+.kicker:after{
+  content:"";
+  display:inline-block;
+  width:70px;
+  height:2px;
+  background:#d7a846;
+  vertical-align:middle;
+  margin-bottom:5px;
+}
+
+.kicker:before{margin-right:12px}
+.kicker:after{margin-left:12px}
+
+
+h1{
+  font-family: 'Playfair Display', serif;
+  font-weight:500;
+  font-size:clamp(26px,3vw,40px);
+  line-height:1.15;
+  margin-bottom:18px;
+  max-width:500px;
+}
+
+h1 strong{
+  color:#d7a846;
+  display:block;
+  margin-top:8px;
+}
+
+.subtitle{
+  font-size:15px;
+  line-height:1.6;
+  margin:18px 0 18px;
+  max-width:480px;
+  color:#ddd;
+}
+
+.mini-benefits{
+  display:flex;
+  gap:32px;
+  margin:16px 0 18px;
+  align-items:center;
+  position:relative;
+  opacity:.9;
+  transition:.3s;
+}
+
+.mini-benefits:before{
+  content:"";
+  position:absolute;
+  top:-12px;
+  left:0;
+  width:60%;
+  height:1px;
+  background:linear-gradient(90deg,#d7a846,transparent);
+  opacity:1;
+  transform:translateY(-2px);
+}
+
+.mini-benefit{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  font-weight:600;
+  color:#ddd;
+}
+
+.cta{
+  display:inline-block;
+  background:linear-gradient(135deg,#f7d675,#c9902f);
+  color:#111;
+  padding:18px 32px;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:900;
+  text-decoration:none;
+  margin-top:2px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+
+.security{margin-top:10px;font-size:11px;color:#aaa}
+
+/* DOR */
+.dor{
+  padding:60px 7%;
+  text-align:center;
+  background:radial-gradient(circle at center, rgba(212,168,70,.08), transparent 60%);
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  color:#d7a846;
+  font-size:18px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:40px;
+}
+
+.section-title:before,.section-title:after{
+  content:"";
+  width:120px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7a846);
+}
+
+.section-title:after{background:linear-gradient(90deg,#d7a846,transparent)}
+
+.dor-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin-bottom:30px;
+}
+
+.dor-card{
+  min-height:170px;
+  border:1px solid rgba(212,168,70,.35);
+  border-radius:10px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,255,255,0.02);
+  text-align:center;
+}
+
+.dor-card:hover .dor-icon svg{
+  transform:scale(1.05);
+  transition:.3s;
+}
+
+.dor-icon svg{
+  width:44px;
+  height:44px;
+  stroke:#d7a846;
+  fill:none;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.dor-icon{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle, rgba(215,168,70,.15), transparent 70%);
+  position:relative;
+  margin-bottom:18px;
+}
+
+.dor-icon::before{
+  content:"";
+  position:absolute;
+  width:70px;
+  height:70px;
+  background:radial-gradient(circle, rgba(215,168,70,0.25), transparent 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  filter:blur(8px);
+}
+
+.dor-card p{font-size:14px;line-height:1.5}
+.dor-final{color:#ccc;font-size:16px}
+.dor-final strong{color:#d7a846}
+
+/* QUEBRA */
+.quebra{
+  padding:50px 7% 40px;
+  background:
+    radial-gradient(circle at 25% 45%, rgba(215,168,70,.12), transparent 36%),
+    linear-gradient(180deg,#05070b 0%,#070a10 45%,#05070b 100%);
+  border-top:1px solid rgba(215,168,70,.10);
+}
+
+.quebra-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:430px 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.quebra-img{position:relative}
+
+.quebra-img:before{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  background:radial-gradient(circle, rgba(215,168,70,.18), transparent 70%);
+  filter:blur(18px);
+}
+
+.quebra-img img{
+  width:430px;
+  height:430px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(215,168,70,.12);
+  box-shadow:0 0 35px rgba(0,0,0,.6);
+}
+
+.quebra-text h2{
+  font-family:Georgia, serif;
+  font-size:clamp(28px,3vw,38px);
+  line-height:1.18;
+  margin-bottom:22px;
+  font-weight:500;
+  color:#fff;
+  max-width:560px;
+}
+
+.quebra-text h2 strong{
+  color:#d7a846;
+  font-weight:600;
+}
+
+.quebra-text p{
+  font-family:'Inter', sans-serif;
+  color:#cfcfcf;
+  margin-bottom:10px;
+  font-size:16px;
+  line-height:1.6;
+}
+
+
+.quebra-text .lead{
+  color:#fff;
+  font-weight:500;
+  font-size:17px;
+}
+
+.quebra-text{
+  max-width:560px;
+}
+
+.quebra .kicker{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#d7a846;
+  font-size:12px;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.quebra .kicker:before,.quebra .kicker:after{
+  content:"";
+  width:56px;
+  height:1px;
+  background:#d7a846;
+}
+
+/* MÉTODO */
+.metodo{
+  padding:40px 7% 50px;
+  background:
+    radial-gradient(circle at 78% 50%, rgba(215,168,70,.12), transparent 40%),
+    linear-gradient(180deg,#05070b 0%,#070a10 50%,#05070b 100%);
+}
+
+.metodo-box{
+  max-width:1200px;
+  margin:0 auto;
+  border:1px solid rgba(215,168,70,.30);
+  border-radius:16px;
+  padding:34px 40px 36px;
+  background:linear-gradient(90deg,rgba(255,255,255,.025),rgba(255,255,255,.01));
+  box-shadow:0 0 38px rgba(0,0,0,.45);
+}
+
+.metodo-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  color:#d7a846;
+  font-size:15px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:30px;
+}
+
+.metodo-title:before,.metodo-title:after{
+  content:"";
+  width:170px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7a846);
+}
+
+.metodo-title:after{background:linear-gradient(90deg,#d7a846,transparent)}
+
+.metodo-content{
+  display:grid;
+  grid-template-columns:48% 52%;
+  gap:30px;
+  align-items:center;
+}
+
+.metodo-copy small{
+  display:block;
+  color:#fff;
+  font-size:16px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.metodo-copy h2{
+  font-family:Georgia, serif;
+  font-size:clamp(22px,2.2vw,28px);
+  line-height:1.2;
+  margin-bottom:12px;
+  color:#d7a846;
+  white-space:nowrap;
+  letter-spacing:1px;
+  font-weight:500;
+}
+
+.metodo-copy p{
+  color:#ddd;
+  font-size:16px;
+  line-height:1.45;
+  max-width:500px;
+  margin-bottom:26px;
+}
+
+.metodo-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  max-width:520px;
+}
+
+.metodo-step{
+  border-left:1px solid rgba(215,168,70,.35);
+  padding:0 15px;
+}
+
+.metodo-step:first-child{border-left:none;padding-left:0}
+
+.metodo-icon{width:42px;height:42px;margin-bottom:10px}
+
+.metodo-icon svg{
+  width:100%;
+  height:100%;
+  stroke:#d7a846;
+  fill:none;
+  stroke-width:2;
+}
+
+.metodo-step h3{
+  color:#d7a846;
+  font-size:13px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+  letter-spacing:.5px;
+}
+
+.metodo-step p{color:#ddd;font-size:13px;line-height:1.35;margin:0}
+
+.metodo-image{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.metodo-image:before{
+  content:"";
+  position:absolute;
+  inset:20px 10px 0;
+  background:radial-gradient(circle, rgba(215,168,70,.18), transparent 65%);
+  filter:blur(22px);
+}
+
+.metodo-image img{
+  position:relative;
+  width:100%;
+  max-width:560px;
+  height:300px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:12px;
+  box-shadow:0 0 38px rgba(0,0,0,.55);
+}
+
+/* TRANSFORMAÇÃO */
+.transformacao{
+  padding:45px 7% 50px;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(215,168,70,.22), transparent 45%),
+    linear-gradient(180deg,#05070b 0%,#070a10 50%,#05070b 100%);
+}
+
+.transformacao-box{
+  max-width:1200px;
+  margin:0 auto;
+  border:1px solid rgba(215,168,70,.28);
+  border-radius:16px;
+  padding:30px 40px 0;
+  background:linear-gradient(90deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+  overflow:hidden;
+  box-shadow:0 0 40px rgba(0,0,0,.45);
+}
+
+.transformacao-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  color:#d7a846;
+  font-size:15px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:34px;
+}
+
+.transformacao-title:before,.transformacao-title:after{
+  content:"";
+  width:170px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d7a846);
+}
+
+.transformacao-title:after{background:linear-gradient(90deg,#d7a846,transparent)}
+
+.transformacao-content{
+  display:grid;
+  grid-template-columns:1fr 80px 1fr 380px;
+  align-items:center;
+  gap:20px;
+}
+
+.trans-col h3{
+  font-size:24px;
+  margin-bottom:18px;
+  font-weight:900;
+}
+
+.antes h3{color:#ff5a5a}
+.depois h3{color:#4fe26f}
+
+.trans-col ul{list-style:none}
+
+.trans-col li{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+  font-size:15px;
+  line-height:1.45;
+}
+
+.depois li{
+  white-space:nowrap;
+  font-size:14px;
+}
+
+.mark-red{color:#ff5a5a;font-weight:900}
+.mark-gold{color:#d7a846;font-weight:900}
+
+.trans-arrow{
+  font-size:80px;
+  color:#d7a846;
+  text-align:center;
+  text-shadow:0 0 20px rgba(215,168,70,.6);
+}
+
+.ana-final{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+
+.ana-final:before{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle, rgba(215,168,70,.55), transparent 70%);
+  filter:blur(30px);
+}
+
+.ana-final img{
+  position:relative;
+  width:360px;
+  height:auto;
+  object-fit:contain;
+  transform:translateY(-15px) translateX(20px);
+}
+
+/* PRODUTO */
+.produto{
+  padding:45px 7% 65px;
+  background:
+    radial-gradient(circle at 25% 45%, rgba(215,168,70,.16), transparent 40%),
+    linear-gradient(180deg,#05070b 0%,#070a10 50%,#05070b 100%);
+}
+
+.produto-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.produto-img{
+  position:relative;
+}
+
+.produto-img:before{
+  content:"";
+  position:absolute;
+  inset:-25px;
+  background:radial-gradient(circle, rgba(215,168,70,.28), transparent 70%);
+  filter:blur(28px);
+}
+
+.produto-img img{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  display:block;
+}
+
+.produto-text h2{
+  color:#d7a846;
+  font-size:18px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:28px;
+}
+
+.produto-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px 45px;
+}
+
+.produto-list li{
+  list-style:none;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color:#e6e6e6;
+  font-size:15px;
+  line-height:1.45;
+}
+
+.produto-list li span{
+  flex:0 0 22px;
+  width:22px;
+  height:22px;
+  border:1px solid rgba(215,168,70,.75);
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#d7a846;
+  font-size:13px;
+  font-weight:900;
+  line-height:1;
+}
+
+/* OFERTA */
+.oferta{
+  padding:70px 7% 60px;
+  background:
+    radial-gradient(circle at 75% 40%, rgba(215,168,70,.18), transparent 45%),
+    linear-gradient(180deg,#05070b 0%,#070a10 50%,#05070b 100%);
+}
+
+.oferta-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:40px;
+  align-items:stretch;
+}
+
+.autor-box{
+  border:1px solid rgba(215,168,70,.25);
+  border-radius:16px;
+  padding:30px;
+  background:rgba(255,255,255,.02);
+}
+
+.autor-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.autor-header img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.autor-header h3{
+  font-size:14px;
+  color:#d7a846;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.autor-box p{
+  font-size:15px;
+  color:#ccc;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.preco-box{
+  border:1px solid rgba(215,168,70,.35);
+  border-radius:16px;
+  padding:30px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  box-shadow:0 0 40px rgba(0,0,0,.6);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+
+.preco-box small{
+  color:#d7a846;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.preco-antigo{
+  color:#aaa;
+  text-decoration:line-through;
+  margin-bottom:5px;
+  font-size:14px;
+}
+
+.preco-atual{
+  font-size:52px;
+  font-weight:900;
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.preco-atual span{
+  color:#d7a846;
+}
+
+.preco-benefits{
+  font-size:13px;
+  color:#ccc;
+  margin-bottom:20px;
+}
+
+.preco-benefits span{
+  margin:0 6px;
+}
+
+.preco-btn{
+  background:linear-gradient(135deg,#f7d675,#c9902f);
+  color:#111;
+  padding:16px;
+  border-radius:10px;
+  font-weight:900;
+  text-decoration:none;
+  display:block;
+  margin-bottom:15px;
+}
+
+.pagamentos{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  font-size:12px;
+  color:#bbb;
+}
+
+/* GARANTIA */
+.garantia{
+  padding:0 7%;
+  background:#05070b;
+}
+
+.garantia-banner{
+  max-width:1200px;
+  height:190px;
+  margin:0 auto;
+  background:url("images/garantia-banner.png") center/cover no-repeat;
+}
+
+/* CTA FINAL */
+.cta-final{
+  padding:80px 7% 90px;
+  text-align:center;
+  background:
+    radial-gradient(circle at center, rgba(215,168,70,.18), transparent 55%),
+    linear-gradient(180deg,#05070b 0%,#070a10 50%,#05070b 100%);
+}
+
+.cta-final h2{
+  font-family: 'Playfair Display', serif;
+  font-weight:500;
+  font-size:clamp(30px,3.5vw,40px);
+  line-height:1.3;
+  margin-bottom:25px;
+  color:#eaeaea;
+  letter-spacing:.3px;
+}
+
+.cta-final h2 strong{
+  color:#d7a846;
+}
+
+.cta-final .cta{
+  font-size:16px;
+  padding:18px 36px;
+  margin-top:10px;
+}
+
+.cta-final .security{
+  margin-top:12px;
+  font-size:12px;
+  color:#bbb;
+}
+
+.icon{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#f6d577,#c79232);
+  color:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .nav,.top-btn{display:none}
+
+  .hero{height:auto;padding:40px 20px}
+  .cta{width:100%;text-align:center}
+  .dor-grid{grid-template-columns:1fr}
+
+.quebra-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:430px 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+  .quebra-img img{width:100%;height:auto;max-width:360px}
+
+  .metodo-content{grid-template-columns:1fr}
+  .metodo-copy h2{white-space:normal}
+  .metodo-steps{grid-template-columns:1fr}
+
+  .metodo-step{
+    border-left:none;
+    border-top:1px solid rgba(215,168,70,.25);
+    padding:18px 0 0;
+  }
+
+  .metodo-step:first-child{border-top:none}
+  .metodo-image img{height:auto}
+
+  .transformacao-content{
+    grid-template-columns:1fr;
+    text-align:left;
+  }
+
+  .trans-arrow{
+    transform:rotate(90deg);
+    font-size:42px;
+  }
+
+  .ana-final{
+    display:flex;
+    justify-content:center;
+  }
+
+  .ana-final img{
+    width:280px;
+    height:auto;
+    transform:translateY(20px);
+  }
+
+  .produto-container,
+  .oferta-container{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+
+  .produto-img{
+    display:flex;
+    justify-content:center;
+  }
+
+  .produto-list{
+    grid-template-columns:1fr;
+    text-align:left;
+  }
+
+  .section-title:before,.section-title:after,
+  .metodo-title:before,.metodo-title:after,
+  .transformacao-title:before,.transformacao-title:after{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<header class="header">
+  <div class="logo">★ <div><span>Carreira</span><br>em Destaque</div></div>
+  <nav class="nav">
+    <a href="#">INÍCIO</a>
+    <a href="#">O GUIA</a>
+    <a href="#">PARA QUEM É</a>
+    <a href="#">CONTEÚDO</a>
+    <a href="#">DEPOIMENTOS</a>
+    <a href="#">PERGUNTAS</a>
+  </nav>
+  <a href="#" class="top-btn">QUERO ME DESTACAR</a>
+</header>
+
+<div class="hero-content">
+  <div class="kicker">Guia prático</div>
+  <h1>Você não está ficando para trás por falta de esforço...<strong>Você só não aprendeu do jeito certo.</strong></h1>
+  <p class="subtitle">Aprenda a usar o Excel da forma que gera reconhecimento, confiança e abre portas para a sua promoção.</p>
+  
+  <div class="mini-benefits">
+
+  <div class="mini-benefit">
+      <span class="icon">✓</span>
+      Se destaque no trabalho
+    </div>
+
+    <div class="mini-benefit">
+      <span class="icon">✓</span>
+      Seja visto como analista
+    </div>
+
+    <div class="mini-benefit">
+      <span class="icon">✓</span>
+      Conquiste promoção
+    </div>
+
+  </div>
+  
+<a href="#" class="cta">QUERO ME DESTACAR NO TRABALHO ›</a>
+  <div class="security">🔒 Pagamento 100% seguro • Acesso imediato</div>
+</div>
+</section>
+
+<section class="dor">
+<div class="section-title">Isso parece com você?</div>
+
+<div class="dor-grid">
+
+<div class="dor-card">
+<div class="dor-icon">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="9"></circle>
+  <path d="M12 7v5l3 2"></path>
+</svg>
+</div>
+<p>Você trabalha muito, mas demora mais que os outros para entregar.</p>
+</div>
+
+<div class="dor-card">
+<div class="dor-icon">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="9"></circle>
+  <path d="M9.5 9a2.5 2.5 0 1 1 4 2c-.8.6-1.5 1-1.5 2"></path>
+  <circle cx="12" cy="17" r="1"></circle>
+</svg>
+</div>
+<p>Tem dificuldade para usar o Excel e sempre precisa de ajuda.</p>
+</div>
+
+<div class="dor-card">
+<div class="dor-icon">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="9"></circle>
+  
+  <!-- olhos -->
+  <circle cx="9" cy="10" r="0.7"></circle>
+  <circle cx="15" cy="10" r="0.7"></circle>
+  
+  <!-- boca triste -->
+  <path d="M8 15c1.5-1.2 6.5-1.2 8 0"></path>
+</svg>
+</div>
+<p>Trava quando precisa analisar dados ou explicar um relatório.</p>
+</div>
+
+<div class="dor-card">
+<div class="dor-icon">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="9"></circle>
+  <path d="M9 9l6 6"></path>
+  <path d="M15 9l-6 6"></path>
+</svg>
+</div>
+<p>Já perdeu oportunidades por não se sentir seguro o suficiente.</p>
+</div>
+
+<div class="dor-card">
+<div class="dor-icon">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="8" r="3"></circle>
+  <path d="M5 20c0-3.5 14-3.5 14 0"></path>
+</svg>
+</div>
+<p>Sente que está no mesmo lugar enquanto outros avançam.</p>
+</div>
+
+</div>
+
+<p class="dor-final">Você não está sozinho. A maioria dos assistentes passa por isso.<br><strong>Mas a boa notícia é: isso tem solução.</strong></p>
+</section>
+
+<section class="quebra">
+<div class="quebra-container">
+<div class="quebra-img"><img src="images/ana-pensativa.png"></div>
+<div class="quebra-text">
+<div class="kicker">A mudança começa aqui</div>
+<h2>Não é sobre dominar o Excel.<br>É sobre usar o Excel para <br><strong>dominar seu trabalho.</strong></h2>
+<p class="lead">Gestor não quer dados. Ele quer entendimento.</p>
+<p>E quem entende, mostra resposta... e conduz a decisão.</p>
+<p>Excel não é só ferramenta. É o que te faz ser vista.</p>
+</div>
+</div>
+</section>
+
+<section class="metodo">
+<div class="metodo-box">
+<div class="metodo-title">O método que vai transformar sua rotina</div>
+<div class="metodo-content">
+<div class="metodo-copy">
+<small>Um caminho simples e poderoso:</small>
+<h2>Entrada → Processamento → Saída</h2>
+<p>Entenda, organize e apresente informações como analistas de verdade.</p>
+
+<div class="metodo-steps">
+<div class="metodo-step"><div class="metodo-icon"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg></div><h3>Entrada</h3><p>Colete os dados corretos.</p></div>
+<div class="metodo-step"><div class="metodo-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a8 8 0 0 0 .1-6"/><path d="M4.5 9a8 8 0 0 0 .1 6"/><path d="M16 4.8a8 8 0 0 0-8 0"/><path d="M8 19.2a8 8 0 0 0 8 0"/></svg></div><h3>Processamento</h3><p>Transforme dados em informação.</p></div>
+<div class="metodo-step"><div class="metodo-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5"/><path d="M12 16V8"/><path d="M16 16v-9"/><path d="M20 7l-4-4-4 4"/></svg></div><h3>Saída</h3><p>Apresente análises que geram decisão.</p></div>
+</div>
+</div>
+
+<div class="metodo-image">
+<img src="images/dashboard.png" alt="Dashboard de análise">
+</div>
+</div>
+</div>
+</section>
+
+<section class="transformacao">
+<div class="transformacao-box">
+<div class="transformacao-title">O que muda na sua vida</div>
+
+<div class="transformacao-content">
+<div class="trans-col antes">
+<h3>Antes</h3>
+<ul>
+<li><span class="mark-red">✕</span> Insegurança para usar o Excel</li>
+<li><span class="mark-red">✕</span> Entrega demorada e cansativa</li>
+<li><span class="mark-red">✕</span> Dependência de outras pessoas</li>
+<li><span class="mark-red">✕</span> Baixa visibilidade no trabalho</li>
+<li><span class="mark-red">✕</span> Oportunidades passam e você fica</li>
+</ul>
+</div>
+
+<div class="trans-arrow">→</div>
+
+<div class="trans-col depois">
+<h3>Depois</h3>
+<ul>
+<li><span class="mark-gold">✓</span> Confiança para resolver qualquer análise</li>
+<li><span class="mark-gold">✓</span> Mais agilidade e organização</li>
+<li><span class="mark-gold">✓</span> Autonomia e segurança</li>
+<li><span class="mark-gold">✓</span> Reconhecimento e visibilidade</li>
+<li><span class="mark-gold">✓</span> Promoção e crescimento real</li>
+</ul>
+</div>
+
+<div class="ana-final">
+<img src="images/ana-transformacao.png" alt="Profissional confiante">
+</div>
+</div>
+</div>
+</section>
+
+<section class="produto">
+<div class="produto-container">
+
+<div class="produto-img">
+<img src="images/produto.png" alt="De Assistente a Analista">
+</div>
+
+<div class="produto-text">
+<h2>DENTRO DO GUIA, VOCÊ ENCONTRA:</h2>
+
+<ul class="produto-list">
+<li><span>✓</span> A história real da Ana e lições práticas</li>
+<li><span>✓</span> Relatórios que impressionam gestores</li>
+<li><span>✓</span> Mentalidade de analista</li>
+<li><span>✓</span> Erros que te fazem perder oportunidades</li>
+<li><span>✓</span> Como organizar dados do jeito certo</li>
+<li><span>✓</span> Atalhos e técnicas que economizam tempo</li>
+<li><span>✓</span> As fórmulas que realmente importam</li>
+<li><span>✓</span> Exemplos práticos do dia a dia</li>
+<li><span>✓</span> Análise que gera insight</li>
+<li><span>✓</span> E muito mais...</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="oferta">
+<div class="oferta-container">
+
+<div class="autor-box">
+<div class="autor-header">
+<img src="images/autor.png" alt="Autor">
+<h3>Quem criou este guia</h3>
+</div>
+
+<p>Este guia foi criado para assistentes que querem dar o próximo passo na carreira e conquistar o lugar que merecem.</p>
+<p>É prático, direto e feito com base no que realmente funciona no dia a dia de quem quer ser promovido.</p>
+<p>Chega de esforço sem resultado.<br>Chegou a hora de ser reconhecida.</p>
+</div>
+
+<div class="preco-box">
+<small>Investimento que cabe no seu bolso</small>
+
+<div class="preco-antigo">De R$ 67,00</div>
+
+<div class="preco-atual">
+R$ <span>37,00</span>
+</div>
+
+<div class="preco-benefits">
+✔ Pagamento único <span>•</span> ✔ Acesso imediato <span>•</span> ✔ 100% seguro
+</div>
+
+<a href="#" class="preco-btn">QUERO ME DESTACAR NO TRABALHO ›</a>
+
+<div class="pagamentos">
+Visa • Master • Pix
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="garantia">
+  <div class="garantia-banner"></div>
+</section>
+
+<section class="cta-final">
+
+<h2>
+  Você está a um passo de sair do operacional<br>
+  e <strong>ser vista como analista.</strong>
+</h2>
+
+<a href="#" class="cta">
+  QUERO ME DESTACAR NO TRABALHO ›
+</a>
+
+<div class="security">
+  🔒 Pagamento 100% seguro • Acesso imediato
+</div>
+
+</section>
+
+
+</body>
+</html>
