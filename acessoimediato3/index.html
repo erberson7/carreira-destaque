@@ -1,63 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carreira em Destaque</title>
+  <meta charset="UTF-8">
+  <title>Carregando...</title>
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
-.desktop {
-    display: block;
-}
-
-.mobile {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .desktop {
-        display: none;
+  <script>
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
     }
 
-    .mobile {
-        display: block;
+    if (isMobile()) {
+      window.location.href = "m/";
+    } else {
+      window.location.href = "d/";
     }
-}
-</style>
-
+  </script>
 </head>
-
 <body>
-
-<!-- VERSÃO PC: vários blocos -->
-<div class="desktop">
-    <img src="images/hero3.png">
-    <img src="images/dor.png">
-    <img src="images/quebra-crenca.png">
-    <img src="images/solucao.png">
-    <img src="images/transformacao.png">
-    <img src="images/prova-social.png">
-    <img src="images/produto.png">
-    <img src="images/oferta.png">
-    <img src="images/cta.png">
-</div>
-
-<!-- VERSÃO MOBILE: imagem única -->
-<div class="mobile">
-    <img src="images/pagina3-versao-mobile.png">
-</div>
-
 </body>
 </html>
