@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
 <link rel="shortcut icon" href="/images/favicon.png">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Carreira em Destaque</title>
 
 <style>
+
 body {
     margin: 0;
     padding: 0;
@@ -23,6 +27,7 @@ img {
     display: block;
 }
 
+/* CONTROLE DE VERSÃO */
 .desktop {
     display: block;
 }
@@ -31,6 +36,71 @@ img {
     display: none;
 }
 
+/* HERO COM BOTÃO CLICÁVEL */
+.bloco-hero {
+    position: relative;
+}
+
+.btn-hero {
+    position: absolute;
+
+    /* AJUSTE FINO DO BOTÃO */
+    bottom: 7%;
+    left: 2%;
+    width: 35%;
+    height: 10%;
+
+    /* DEBUG (REMOVER DEPOIS) */
+    /*background: red;*/
+    /*opacity: 0.3;*/
+
+    cursor: pointer;
+}
+
+.btn-hero2 {
+    position: absolute;
+
+    /* AJUSTE FINO DO BOTÃO */
+    bottom: 87%;
+    left: 83%;
+    width: 15%;
+    height: 10%;
+    cursor: pointer;
+}
+
+/* OFERTA COM BOTÃO CLICÁVEL */
+.bloco-oferta {
+    position: relative;
+}
+
+.btn-oferta {
+    position: absolute;
+
+    /* AJUSTE FINO DO BOTÃO */
+    bottom: 41%;
+    left: 44%;
+    width: 53%;
+    height: 11%;
+    cursor: pointer;
+}
+
+/* CTA COM BOTÃO CLICÁVEL */
+.bloco-cta {
+    position: relative;
+}
+
+.btn-cta {
+    position: absolute;
+
+    /* AJUSTE FINO DO BOTÃO */
+    bottom: 26%;
+    left: 8%;
+    width: 56%;
+    height: 16%;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .desktop {
         display: none;
@@ -40,28 +110,92 @@ img {
         display: block;
     }
 }
+
+.rodape{
+  text-align:center;
+  padding:40px 20px;
+  font-size:12px;
+  color:#aaa;
+  background:#000; /* mesmo preto elegante da sua página */
+  border-top:1px solid rgba(215,168,70,0.2);
+}
+
+.rodape a{
+  color:#d7a846; /* dourado */
+  text-decoration:none;
+}
+
+.rodape a:hover{
+  text-decoration:underline;
+}
+
+.disclaimer{
+  margin-top:10px;
+  color:#999;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- VERSÃO PC: vários blocos -->
+<!-- ===================== -->
+<!-- VERSÃO DESKTOP -->
+<!-- ===================== -->
+
 <div class="desktop">
-    <img src="images/hero3.png">
+
+    <!-- HERO COM BOTÃO -->
+    <div class="bloco-hero">
+        <img src="images/hero3.png">
+        <a href="https://pay.hotmart.com/H105661370T" target="_blank" class="btn-hero"></a>
+        <a href="https://pay.hotmart.com/H105661370T" target="_blank" class="btn-hero2"></a>
+    </div>
+
+
+
+
+    <!-- RESTANTE DOS BLOCOS -->
     <img src="images/dor.png">
     <img src="images/quebra-crenca.png">
     <img src="images/solucao.png">
     <img src="images/transformacao.png">
     <img src="images/prova-social.png">
     <img src="images/produto.png">
-    <img src="images/oferta.png">
-    <img src="images/cta.png">
-</div>
 
-<!-- VERSÃO MOBILE: imagem única -->
-<div class="mobile">
-    <img src="images/pagina3-versao-mobile.png">
+    <!-- OFERTA COM BOTÃO -->
+    <div class="bloco-oferta">
+    <img src="images/oferta.png">
+        <a href="https://pay.hotmart.com/H105661370T" target="_blank" class="btn-oferta"></a>
+    </div>
+
+    <!-- CTA COM BOTÃO -->
+    <div class="bloco-cta">
+    <img src="images/cta.png">
+        <a href="https://pay.hotmart.com/H105661370T" target="_blank" class="btn-cta"></a>
+    </div>
+
+<footer class="rodape">
+
+  <p>© 2026 Carreira em Destaque. Todos os direitos reservados.</p>
+
+  <div class="links">
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a> |
+    <a href="#">Política de Reembolso</a>
+  </div>
+
+  <p class="disclaimer">
+    Este produto é educacional. Os resultados podem variar de acordo com a dedicação de cada pessoa.
+  </p>
+
+  <p class="contato">
+    Contato: suporte@carreiradestaque.com
+  </p>
+
+</footer>
+
 </div>
 
 </body>
