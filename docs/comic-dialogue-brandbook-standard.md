@@ -151,26 +151,90 @@ Critérios do hook:
 - evitar frase genérica motivacional;
 - conectar com a dor de execução invisível, clareza, análise, Excel/dados, produtividade, IA ou visibilidade.
 
-Exemplos de chamada de capa:
+### Fórmula preferida de hook da capa
+
+A capa deve combinar **pergunta inteligente + curiosidade narrativa sobre a Ana**.
+
+Modelo recomendado:
 
 ```text
-VOCÊ ENTREGA.
-MAS ALGUÉM PERCEBE?
+[PERGUNTA QUE ATIVA A DOR]
+Veja como Ana percebeu isso.
+```
+
+Ou:
+
+```text
+[PERGUNTA/AFIRMAÇÃO DE TENSÃO]
+A Ana só entendeu quando isso aconteceu.
+```
+
+Ou:
+
+```text
+[CONVITE PARA UMA DESCOBERTA]
+A virada da Ana começou aqui.
+```
+
+Exemplo aprovado pelo Erberson como direção:
+
+```text
+Você entrega valor no trabalho?
+Veja como Ana percebeu isso.
+```
+
+Esse tipo de hook funciona melhor porque não é só uma frase de impacto genérica; ele abre uma mini-história e dá motivo para avançar.
+
+### Banco de hooks no estilo correto
+
+```text
+Você entrega valor no trabalho?
+Veja como Ana percebeu isso.
 ```
 
 ```text
-TRABALHAR MUITO
-NÃO GARANTE RECONHECIMENTO.
+Seu esforço aparece para quem decide?
+Veja o que Ana descobriu.
 ```
 
 ```text
-SEU RELATÓRIO
-MOSTRA VALOR?
+Você só entrega tarefas?
+Ana achava que isso bastava.
 ```
 
 ```text
-O ERRO NÃO ESTÁ
-NA SUA PLANILHA.
+Seu relatório mostra trabalho... ou valor?
+A Ana descobriu a diferença.
+```
+
+```text
+Você trabalha muito e ainda se sente invisível?
+Ana também passava por isso.
+```
+
+```text
+Você sabe explicar o impacto do que faz?
+Ana aprendeu isso na prática.
+```
+
+```text
+A planilha estava certa.
+Mas Ana continuava invisível.
+```
+
+```text
+O problema não era o esforço da Ana.
+Era o que ninguém conseguia enxergar.
+```
+
+```text
+Ana entregava tudo no prazo.
+Até perceber que prazo não é valor.
+```
+
+```text
+Você quer ser reconhecida pelo que faz?
+Comece pela descoberta da Ana.
 ```
 
 Após a capa, os slides seguintes desenvolvem o diálogo entre Ana e Sr. Santos.

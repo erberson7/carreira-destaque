@@ -40,7 +40,28 @@ Antes de gerar a primeira imagem, o estrategista deve definir:
 - **Tensão visual:** que cena mostra essa dor?
 - **Curiosidade:** por que a pessoa vai querer avançar?
 - **Promessa implícita:** que insight vem nos próximos slides?
-- **Chamada curta:** frase de impacto da capa.
+- **Chamada curta:** pergunta/tensão + gancho narrativo da Ana.
+
+A chamada da capa deve seguir a lógica:
+
+```text
+[pergunta que ativa a dor]
+Veja como Ana percebeu isso.
+```
+
+ou:
+
+```text
+[tensão específica]
+A Ana só entendeu quando isso aconteceu.
+```
+
+Exemplo aprovado como direção:
+
+```text
+Você entrega valor no trabalho?
+Veja como Ana percebeu isso.
+```
 
 Modelo:
 
@@ -49,7 +70,7 @@ Dor alvo: [dor específica]
 Tensão visual: [cena com Ana]
 Curiosidade: [lacuna que faz avançar]
 Promessa implícita: [o que a pessoa vai aprender]
-Chamada da capa: [texto curto]
+Chamada da capa: [pergunta/tensão + história da Ana]
 ```
 
 ## Prompt mestre para Slide 1 — hook/capa
