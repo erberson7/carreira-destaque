@@ -6,16 +6,20 @@ Este documento substitui o padrão anterior para criação de posts/carrosséis 
 
 ## Regra mestre
 
-Todo post/carrossel deve nascer como uma **conversa visual educativa**:
+Todo post/carrossel deve nascer como uma **narrativa visual educativa**:
 
 ```text
+Slide 1 prende atenção com uma chamada inteligente e específica.
+Slides seguintes desenvolvem a conversa entre Ana e Sr. Santos.
 Ana apresenta uma dúvida/dor da rotina profissional.
 Sr. Santos responde com orientação estratégica e prática.
 Ana reflete, entende ou aplica o ensinamento.
 O post fecha com insight simples + CTA.
 ```
 
-Não criar posts conceituais soltos do tipo “frase forte + fundo bonito” como padrão principal. A identidade agora é narrativa: personagem, diálogo, mentoria e transformação.
+O Slide 1 não precisa ser diálogo imediatamente. Ele pode ser uma capa/hook com Ana em cena e uma chamada forte, pensada para fazer o usuário parar de rolar o feed e avançar o carrossel.
+
+Não criar posts conceituais soltos do tipo “frase forte + fundo bonito” como padrão principal. A identidade agora é narrativa: personagem, contexto, diálogo, mentoria e transformação.
 
 ## Objetivo narrativo
 
@@ -127,9 +131,54 @@ CTA:
 Salve este conteúdo e aplique ainda hoje.
 ```
 
+## Estratégia do Slide 1 — hook/capa
+
+O primeiro slide tem uma função diferente dos demais: **parar o scroll e gerar avanço no carrossel**.
+
+Ele não precisa começar como diálogo. Pode ser:
+
+- Ana em uma cena de tensão/descoberta profissional;
+- uma pergunta inteligente;
+- uma frase de confronto elegante;
+- um microdiagnóstico da dor;
+- uma promessa de insight sem parecer clickbait.
+
+Critérios do hook:
+
+- ser específico da rotina da persona;
+- provocar identificação em menos de 1 segundo;
+- abrir curiosidade para o próximo slide;
+- evitar frase genérica motivacional;
+- conectar com a dor de execução invisível, clareza, análise, Excel/dados, produtividade, IA ou visibilidade.
+
+Exemplos de chamada de capa:
+
+```text
+VOCÊ ENTREGA.
+MAS ALGUÉM PERCEBE?
+```
+
+```text
+TRABALHAR MUITO
+NÃO GARANTE RECONHECIMENTO.
+```
+
+```text
+SEU RELATÓRIO
+MOSTRA VALOR?
+```
+
+```text
+O ERRO NÃO ESTÁ
+NA SUA PLANILHA.
+```
+
+Após a capa, os slides seguintes desenvolvem o diálogo entre Ana e Sr. Santos.
+
 ## Regras de composição visual
 
-- Usar sempre diálogo entre Ana e Sr. Santos.
+- Slide 1 pode ser hook/capa sem diálogo, desde que tenha Ana/contexto visual e chamada forte.
+- Slides seguintes devem usar diálogo entre Ana e Sr. Santos.
 - Apenas um ensinamento principal por post.
 - Diálogos curtos e diretos.
 - Linguagem simples, humana e emocional.
@@ -141,12 +190,52 @@ Salve este conteúdo e aplique ainda hoje.
 - Balões devem ser legíveis no celular.
 - Não sobrecarregar o quadro com texto.
 
+## Regra operacional — não editar imagens
+
+Erberson definiu: **não mexer nas imagens geradas pela IA**.
+
+Portanto:
+
+- usar a imagem original que vier da IA para validação;
+- não recortar;
+- não adaptar para 4:5 manualmente;
+- não adicionar borda manual;
+- não aplicar logo manualmente em testes desta fase;
+- não corrigir texto por script;
+- não fazer composição posterior.
+
+Se a IA errar formato, texto, logo, balões ou personagens, a saída deve ser **reprovada e regenerada**, não editada.
+
 ## Formatos oficiais
 
 - Feed/carrossel: `1080x1350` — proporção 4:5.
 - Stories/Reels: `1080x1920` — proporção 9:16.
 
-Para geração com `image_generate`, usar `aspect_ratio: portrait` como formato mobile-first; depois recortar/ajustar se necessário para 4:5 ou 9:16.
+Durante esta fase de testes com OpenAI `gpt-image-2-high`, usar `aspect_ratio: portrait` e **manter a imagem original gerada pela IA**. Não recortar nem adaptar manualmente. Se a proporção não atender, ajustar o prompt e gerar novamente.
+
+## Padronização de balões e texto
+
+Para reduzir erros da IA e manter consistência visual, todo prompt deve especificar:
+
+- balões brancos ou off-white;
+- texto preto ou grafite escuro;
+- contorno dourado fino nos balões;
+- fonte com aparência limpa, sem serifa, estilo Montserrat;
+- no máximo 2 balões por slide comum;
+- no máximo 1 frase curta por balão;
+- até 8 palavras por balão quando possível;
+- evitar parágrafos longos;
+- evitar pontuação excessiva;
+- usar caixa alta apenas em títulos/capa, não em diálogos longos;
+- manter balões sempre dentro da área segura;
+- nenhum balão pode cobrir rosto, mão ou expressão principal;
+- cada balão deve apontar claramente para quem está falando.
+
+Prompt padrão para balões:
+
+```text
+Balões de fala padronizados: fundo branco/off-white, contorno dourado fino, texto preto em fonte limpa sem serifa, estilo Montserrat, muito legível no celular. No máximo dois balões. Cada balão com uma frase curta. Balões dentro da área segura, sem cobrir rostos. Cada balão aponta claramente para o personagem correto.
+```
 
 ## Área segura
 
@@ -185,14 +274,17 @@ Usar o modo escuro como padrão até aprovação explícita de variações.
 
 ## Logo e marca
 
-A IA NÃO deve inventar, redesenhar ou escrever a logo.
+Quando Erberson pedir teste com logo, a logo oficial deve ser enviada como **referência para a IA**.
 
-Regra operacional:
+Regra atual:
 
-1. Gerar a arte com personagens, cena, balões e texto.
-2. Pedir explicitamente: sem logotipo inventado, sem símbolo de marca, sem texto “Carreira em Destaque” se a logo oficial for aplicada depois.
-3. Aplicar a logo oficial depois como ativo fixo, se necessário.
-4. Reprovar se a IA deformar a marca.
+1. Usar a logo oficial como imagem de referência.
+2. Pedir que a IA mantenha símbolo, forma e texto da marca com máxima fidelidade.
+3. Pedir logo pequena, discreta, dentro da área segura, preferencialmente no rodapé.
+4. Não editar a imagem depois.
+5. Reprovar se a IA deformar, redesenhar, inventar ou escrever a marca incorretamente.
+
+Observação: para produção final futura, se Erberson permitir edição manual, aplicar a logo oficial como ativo fixo seria mais seguro. Mas na fase atual, a regra do usuário é usar a imagem original da IA sem intervenção.
 
 ## Prompt base para gerar teste visual
 
